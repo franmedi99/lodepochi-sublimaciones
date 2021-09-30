@@ -1,21 +1,21 @@
-
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 //import of CSS
 import './assets/css/bootstrap.min.css';
-import './assets/css/font-awesome.css'
-import './assets/css/font-awesome.min.css'
-import './App.css';
-
+import './assets/css/font-awesome.css';
+import './assets/css/font-awesome.min.css';
 //import of JS
 import 'jquery';
 import 'popper.js';
+//Components
+import UserHome from './components/UserHome';
 
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>hola que hace</h1>
-    </div>
+    <Router>
+      <Route exact path='/' component={UserHome}/>
+    </Router>
   );
 }
 
