@@ -1,0 +1,138 @@
+nav {
+  z-index: 1;
+}
+
+.index {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.index2{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.nav-link {
+  font-size: 1rem;
+}
+
+.btn-circle.btn-xl {
+  width        : 70px;
+  height       : 70px;
+  padding      : 10px 16px;
+  border-radius: 35px;
+  font-size    : 24px;
+  line-height  : 1.33;
+}
+
+.btn-circle {
+  width        : 30px;
+  height       : 30px;
+  padding      : 6px 0px;
+  border-radius: 15px;
+  text-align   : center;
+  font-size    : 12px;
+  line-height  : 1.42857;
+}
+
+.masthead {
+  position           : relative;
+  color              : white;
+  width              : 100%;
+  height             : 100%;
+  background         : url('../img/fondo1.jpg');
+  background-position: center;
+  background-repeat  : no-repeat;
+  background-size    : cover;
+}
+
+.fuente {
+  font-family: fantasy
+}
+
+.bordes {
+  border-radius: 1px;
+}
+
+.footer {
+  position  : fixed;
+  left      : 0;
+  bottom    : 0;
+  color     : #272727;
+  width     : 100%;
+  text-align: center;
+}
+
+.dos {
+  border-color : #000 !important;
+  border-radius: 30px;
+}
+
+.blanco::placeholder {
+  color  : white;
+  opacity: 1;
+}
+.nobackground {
+  background   : none;
+  border       : none;
+  border-radius: none;
+  outline      : none;
+}
+
+.nobackground:focus {
+  border : none;
+  outline: none;
+}
+
+.index_grid{
+  display: grid;
+  grid-template-columns: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  margin:9%;
+  padding: 4%;
+  border-radius: 5px;
+}
+
+.img {
+  margin: auto;
+  width: 50%;
+}
+
+
+.botonexception {
+  border    : none;
+  box-shadow: none;
+  cursor    : default;
+}
+
+.botonexception:focus {
+  box-shadow: none;
+  cursor    : default;
+}
+
+.botonexception:hover {
+  box-shadow: none;
+  cursor    : default;
+}
+
+
+@media (max-width: 425px){
+  .masthead {
+    height             : 200%;
+  }
+  .index_grid{
+    margin-top: 30%;
+  }
+  .img{
+    width: 90%;
+  }
+  .fuente h2{
+    padding: 10%;
+  }
+}
+
+@media (min-width: 426px) and (max-width:1280px){
+  .masthead {
+    padding: 5%;
+  }
+ 
+}
