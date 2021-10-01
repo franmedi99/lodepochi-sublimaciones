@@ -1,0 +1,116 @@
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    background-color:white;
+    text-align: center;
+    margin : 0;
+    padding : 0;
+
+}
+/*IMAGENES*/
+.contenidoA{
+    display: grid;
+    grid-template-columns: 100%;
+    box-shadow: 1px 0px 10px 5px rgb(255, 0, 64, 0.4) !important;
+    background-color: rgba(255, 0, 64, 0.6);
+    padding:2%;
+    color: white;
+}
+.desc{
+    font-family: 'Lobster', cursive;
+    margin: 2%;
+    padding: 2%;
+}
+.contenidoB{
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: rgb(255, 255, 255);
+    padding:4%;
+    color: black;
+}
+
+.imagesA{
+    width: 100px;
+    height : 100px;
+    border: 3px solid white;
+    border-radius: 100px;
+    margin :auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+.imagesB{
+    width: auto;
+    height : 350px;
+}
+
+/*NAV*/
+.navegacion{
+    background-color: rgba(255, 0, 64, 0.6);
+    border-top: 2px solid rgba(255, 0, 64 , 0.8);
+    margin-top: 10vh;
+    padding-bottom: 2%;
+    box-shadow: 1px 1px 2px 0px  rgba(255, 0, 64, 0.8);
+    color : white
+}
+.navegacion h3{
+    margin-top: 21%;
+    font-size: 90%;
+}
+.navegacion h2{
+    font-family: 'Lobster', cursive;
+    font-size: 130%;
+}
+
+/*LOGO*/
+.logo{
+    border: 3px solid rgb(255, 0, 64);
+    position:absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    transform:translate(-50%,-50%)
+
+}
+
+/*CONTENIDO*/
+.presentacion{
+    font-family: 'Roboto', sans-serif ;
+    width: 100vw;
+    margin:auto;
+}
+
+/*FOOTER*/
+.footer{
+    color: white;
+    border-top: 2px solid rgb(255, 0, 64);
+    padding: 5%;
+    background-color: rgba(255, 0, 64, 0.6);
+}
+.footer h4{
+    font-family: 'Lobster', cursive;
+}
+.contacto{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin-top: 3%;
+    
+}
+.contacto a{
+    text-decoration: none;
+    font-size: 120%;
+    color: white;
+    cursor: pointer;
+}
+
+/*MEDIA QUERYS*/
+@media (min-width: 500px) and (max-width: 768px){
+    .navegacion h3{
+        margin-top: 15%;
+    }
+    .contenidoB{
+        display: grid;
+        grid-template-columns:50% 50%;
+    }
+
+
+}
