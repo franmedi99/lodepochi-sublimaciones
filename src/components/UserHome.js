@@ -1,5 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import moment from 'moment'
+import 'moment/locale/es'
+/*LOGOS*/
+import cantimplora from '../assets/img/cantimplora.ico' 
 
 export default function UserHome() {
 
@@ -22,32 +26,40 @@ export default function UserHome() {
                 <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laudantium animi nemo reiciendis incidunt, velit dolores rem minima similique necessitatibus ipsam possimus ullam architecto repudiandae voluptates aut quasi quo. Laborum.</h4>
             </div>
             <div className="contenidoA">
-                <h2>Hacemos sublimaciones en </h2>
-                <div>Tazas</div>
-                <div>Cantimploras</div>
-                <div>Remeras</div>
-                <div>Baby Body</div>
-                <div>Gorras</div>
-                <div>Barbijos</div>
-                <div>Rompe Cabezas</div>
-                <div>Relojes</div>
+                <h2>Realizamos sublimaciones en </h2>
+                <div  className="cat">
+                    <div>Tazas ✓</div>
+                    <div><img src={cantimplora} alt="barbijo" className="cat-logos" /> Cantimploras ✓</div>
+                    <div>Remeras ✓</div>
+                    <div>Baby Body ✓</div>
+                    <div>Gorras ✓</div>
+                    <div>Barbijos ✓</div>
+                    <div>Rompe Cabezas ✓</div>
+                    <div>Relojes ✓</div>
+                    <div>¡Y muchos mas! ✓</div>
+                </div>
             </div>
             <div className="contenidoB">
                 {user_data.map(data => {
                     console.log(data.media_url);
                     return(
-                        <div key={data.id} className="galeria">
+                        <div key={data.id} >
                             {data.media_type === 'VIDEO' ?
                                 <div className="card m-3">
                                     <video src={data.media_url} autoPlay loop muted className="imagesB"></video>
-
-                                    {data.caption ? <div className="card-body"><p className="card-text">{data.caption}</p></div> : null}
+                                    <div className="card-body">{data.caption ?<h5 className="card-text">{data.caption}</h5> : null}</div>
+                                    <h5>{moment(data.timestamp).fromNow()}</h5> 
                                 </div>
                              
                             : 
                             <div className="card m-3">
                                 <img src={data.media_url} className="card-img-top imagesB" alt={data.id}/>
-                            {data.caption ? <div className="card-body"><p className="card-text">{data.caption}</p></div> : null}
+                                <div className="card-body">
+                                    {data.caption ? <h5 className="card-text">{data.caption}</h5> : null}
+                                    <h5>{moment(data.timestamp).fromNow()}</h5> 
+                                   
+                                    
+                                </div> 
                             </div>
                             } 
                         </div>
