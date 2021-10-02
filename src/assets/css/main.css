@@ -33,10 +33,11 @@ body{
     padding: 2%;
 }
 .contenidoB{
+   
     display: grid;
     grid-template-columns: 100%;
     background-color: rgb(255, 255, 255);
-    padding:4%;
+    
     color: black;
 }
 .imagesA{
@@ -84,6 +85,29 @@ body{
     height: 20px;
     margin-right: 1%;
     margin-bottom: 1%;
+}
+.blanco::placeholder {
+    color:white;
+  }
+
+  .blanco::placeholder {
+    color: white;
+    opacity: 1; 
+    font-style: italic;
+  }
+  
+  .blanco:-ms-input-placeholder { 
+   color: white;
+   font-style: italic;
+  }
+  
+  .blanco::-ms-input-placeholder { 
+   color: white;
+   font-style: italic;
+  }
+
+.bg-buscador{
+    background-color: rgba(255, 0, 64, 0.6);
 }
 
 /*CONTENIDO*/
