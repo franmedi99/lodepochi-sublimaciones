@@ -6,7 +6,6 @@ import 'moment/locale/es'
 
 export default function UserHome() {
 
-    const token = "IGQVJYOThHX3N6dFJsLUhQRzRKeGotdXVteVdMcGpvSnhiTnlJcjM1Vl95VzE4NmxuX21tM0czVm5UMmpIRW1Tc0pOdjNSdGVPZAHRJS0ZA0SGlGNHdOdnpxTkdGaGdMaU5JS2NXLVRZAaHlsTVFBbjBZATwZDZD"
     const [user_data, setUser_data] = useState([])
     const [results, setResults] = useState([])
     const [query, setQuery] = useState([])
@@ -15,7 +14,7 @@ export default function UserHome() {
     
     useEffect(() => {
         const GetUserData = async () => {
-            const {data : {data}} = await axios.get('https://graph.instagram.com/me/media?fields=id,media_url,media_type,caption,timestamp&limit=100&access_token='+token)
+            const {data : {data}} = await axios.get('https://graph.instagram.com/me/media?fields=id,media_url,media_type,caption,timestamp&limit=100&access_token='+process.env.REACT_APP_TOKEN)
             setUser_data(data)
             setResults(data)
             const arraytosearch = []
