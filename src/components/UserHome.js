@@ -2,8 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import moment from 'moment'
 import 'moment/locale/es'
-/*LOGOS*/
-import cantimplora from '../assets/img/cantimplora.ico' 
+
 
 export default function UserHome() {
 
@@ -32,6 +31,7 @@ export default function UserHome() {
          
         }
         GetUserData()
+        // eslint-disable-next-line
     }, [])
     const buscador = (query,search) => {
    
@@ -58,7 +58,7 @@ export default function UserHome() {
                 <h2>Realizamos sublimaciones en </h2>
                 <div  className="cat">
                     <div>Tazas ✓</div>
-                    <div><img src={cantimplora} alt="barbijo" className="cat-logos" /> Cantimploras ✓</div>
+                    <div> Cantimploras ✓</div>
                     <div>Remeras ✓</div>
                     <div>Baby Body ✓</div>
                     <div>Gorras ✓</div>
@@ -84,26 +84,30 @@ export default function UserHome() {
                 
                 results.map(data => {
                     return(
-                        <div key={data.id} >
+                        <div key={data.id}>
                             {data.media_type === 'VIDEO' ?
                                 <div className="card m-3">
                                     <video src={data.media_url} autoPlay loop muted className="imagesB"></video>
-                                    <div className="card-body">{data.caption ?<h5 className="card-text">{data.caption}</h5> : null}</div>
-                                    <h5>{moment(data.timestamp).fromNow()}</h5> 
+                                    <div className="card-body">
+                                        {data.caption ? <h5 className="card-text">{data.caption}</h5> : null}
+                                        <h5>{moment(data.timestamp).fromNow()}</h5> 
+                                        <a href={data.media_url} className="ver" >Ver</a>
+                                        </div>
                                 </div>
-                             
                             : 
                             <div className="card m-3">
                                 <img src={data.media_url} className="card-img-top imagesB" alt={data.id}/>
                                 <div className="card-body">
                                     {data.caption ? <h5 className="card-text">{data.caption}</h5> : null}
                                     <h5>{moment(data.timestamp).fromNow()}</h5> 
-                                   
-                                    
+                                    <a href={data.media_url} className="ver" >Ver</a>
                                 </div> 
-                            </div>
+                                
+                            </div>   
                             } 
+                            
                         </div>
+                        
                     )
                 })
                 
