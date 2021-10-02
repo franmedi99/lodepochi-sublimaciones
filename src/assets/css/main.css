@@ -53,6 +53,7 @@ body{
     padding-bottom: 1%;
 
 }
+.ds{display: none;}
 .ver:hover{
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -99,6 +100,7 @@ body{
     animation-direction: alternate;
     animation-name: modalE;
 }
+
 
 .tbody{
     display: grid;
@@ -192,7 +194,7 @@ body{
     grid-template-columns: 33% 33% 33%;
     margin-top: 3%;
 }
-.contacto a{
+.contacto button{
     text-decoration: none;
     font-size: 120%;
     color: white;
