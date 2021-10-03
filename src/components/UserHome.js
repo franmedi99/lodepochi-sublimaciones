@@ -84,7 +84,7 @@ export default function UserHome() {
             </div>
 
 
-        <div className="input-group mx-auto mt-5 mb-5 bg-buscador">
+        <div className="input-group mx-auto mt-5 mb-5 bg-buscador text-light">
             <input type="text" name="search" placeholder="Escribí un producto..." className="form-control ml-3 mb-3 blanco"  onChange={onChange}/> 
             <div className="input-group-append ">
                 <i className="fa fa-search fa-2x mt-4 ml-2 mr-1 text-light" aria-hidden="true"></i> 
