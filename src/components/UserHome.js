@@ -45,7 +45,7 @@ export default function UserHome() {
         buscador(query,e.target.value)
       }
       const vermodal = obj =>{
-       setModalData({img:obj.img,caption:obj.caption,media_type:obj.media_type})
+       setModalData({img:obj.img,caption:obj.caption,media_type:obj.media_type, timestamp:obj.timestamp})
        const vermodal = document.getElementById('vermodal')
        vermodal.click()
       }
@@ -69,22 +69,22 @@ export default function UserHome() {
                 <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laudantium animi nemo reiciendis incidunt, velit dolores rem minima similique necessitatibus ipsam possimus ullam architecto repudiandae voluptates aut quasi quo. Laborum.</h4>
             </div>
             <div className="contenidoA">
-                <h2>Realizamos sublimaciones en </h2>
+                <h2>• Realizamos sublimaciones en : </h2>
                 <div  className="cat">
-                    <div>Tazas ✓</div>
-                    <div> Cantimploras ✓</div>
-                    <div>Remeras ✓</div>
-                    <div>Baby Body ✓</div>
-                    <div>Gorras ✓</div>
-                    <div>Barbijos ✓</div>
-                    <div>Rompe Cabezas ✓</div>
-                    <div>Relojes ✓</div>
-                    <div>¡Y muchos mas! ✓</div>
+                    <div>Tazas </div>
+                    <div> Cantimploras </div>
+                    <div>Remeras </div>
+                    <div>Baby Body </div>
+                    <div>Gorras </div>
+                    <div>Barbijos </div>
+                    <div>Rompe Cabezas </div>
+                    <div>Relojes </div>
+                    <div>¡Y muchos mas! </div>
                 </div>
             </div>
 
 
-        <div className="input-group mx-auto mt-5 mb-5 bg-buscador ">
+        <div className="input-group mx-auto mt-5 mb-5 bg-buscador">
             <input type="text" name="search" placeholder="Escribí un producto..." className="form-control ml-3 mb-3 blanco"  onChange={onChange}/> 
             <div className="input-group-append ">
                 <i className="fa fa-search fa-2x mt-4 ml-2 mr-1 text-light" aria-hidden="true"></i> 
@@ -98,22 +98,18 @@ export default function UserHome() {
                     return(
                         <div key={data.id}>
                             {data.media_type === 'VIDEO' ?
-                                <div className="card m-3">
+                                <div className="card m-3" >
                                     <video src={data.media_url} autoPlay loop muted className="imagesB"></video>
-                                    <div className="card-body">
-                                        {data.caption ? <h5 className="card-text">{data.caption}</h5> : null}
-                                        <h5>{moment(data.timestamp).fromNow()}</h5> 
-                                        <a href="#/" className="ver"  onClick={(e) => vermodal({img:data.media_url ,caption:data.caption,media_type:data.media_type})} >Ver</a>
-                                        </div>
+                                    {data.caption ? <h5 className="card-text mt-3 p-3">{data.caption}</h5> : null}
+                                    <h5 className="mt-1">{moment(data.timestamp).fromNow()}</h5> 
+                                    <a href="#/" className="ver mx-auto"  onClick={(e) => vermodal({img:data.media_url ,caption:data.caption,media_type:data.media_type})} >Ver</a>
                                 </div>
                             : 
-                            <div className="card m-3">
+                            <div className="card m-3" >
                                 <img src={data.media_url} className="card-img-top imagesB" alt={data.id}/>
-                                <div className="card-body">
-                                    {data.caption ? <h5 className="card-text">{data.caption}</h5> : null}
-                                    <h5>{moment(data.timestamp).fromNow()}</h5> 
-                                    <a href="#/" className="ver"  onClick={(e) => vermodal({img:data.media_url ,caption:data.caption,media_type:data.media_type})} >Ver</a>
-                                </div> 
+                                {data.caption ? <h5 className="card-text mt-3 p-3 info-card">{data.caption}</h5> : null}
+                                <h5 className="mt-2">{moment(data.timestamp).fromNow()}</h5> 
+                                <a href="#/" className="ver  mx-auto"  onClick={(e) => vermodal({img:data.media_url ,caption:data.caption,media_type:data.media_type})} >Ver</a>
                             </div>   
                             } 
                         </div>
