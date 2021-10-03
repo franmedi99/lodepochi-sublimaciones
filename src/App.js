@@ -20,7 +20,7 @@ function App() {
   return (
     <Router>
       <Nav/>
-      <Route exact path='/' component={UserHome}/>
+      <Route exact path='/lodepochi-sublimaciones' component={UserHome}/>
       <Footer/>
     </Router>
   );
