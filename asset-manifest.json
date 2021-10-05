@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/lodepochi-sublimaciones/static/css/main.76ff5d39.chunk.css",
-    "main.js": "/lodepochi-sublimaciones/static/js/main.7de93d06.chunk.js",
-    "main.js.map": "/lodepochi-sublimaciones/static/js/main.7de93d06.chunk.js.map",
+    "main.js": "/lodepochi-sublimaciones/static/js/main.6d425f54.chunk.js",
+    "main.js.map": "/lodepochi-sublimaciones/static/js/main.6d425f54.chunk.js.map",
     "runtime-main.js": "/lodepochi-sublimaciones/static/js/runtime-main.122b8e8f.js",
     "runtime-main.js.map": "/lodepochi-sublimaciones/static/js/runtime-main.122b8e8f.js.map",
     "static/js/2.d7056331.chunk.js": "/lodepochi-sublimaciones/static/js/2.d7056331.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.122b8e8f.js",
     "static/js/2.d7056331.chunk.js",
     "static/css/main.76ff5d39.chunk.css",
-    "static/js/main.7de93d06.chunk.js"
+    "static/js/main.6d425f54.chunk.js"
   ]
 }
