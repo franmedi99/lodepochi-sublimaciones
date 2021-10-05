@@ -66,7 +66,7 @@ export default function UserHome() {
             </div>
 
             <div className="desc">
-                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora laudantium animi nemo reiciendis incidunt, velit dolores rem minima similique necessitatibus ipsam possimus ullam architecto repudiandae voluptates aut quasi quo. Laborum.</h4>
+                <h4>En lo pochi sublimaciones hacemos todo personalizado venís con tu idea con tu logo con tu foto y hacemos todo realidad en tazas remeras buzos camperas banderas equipo de fútbol agasajo para el día de la madre día del padre festejos etcétera también contamos con fotocopias plastificados foto 4 por 4 anillados insumos para sublimación kit de cumpleaños</h4>
             </div>
             <div className="contenidoA">
                 <h2>• Realizamos sublimaciones en : </h2>
